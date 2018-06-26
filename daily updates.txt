@@ -199,4 +199,220 @@ Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
 $ touch calculate.py
 
 Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ ^C
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    index.html
+        deleted:    readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        calculate.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git commit -am "index and readme deleted and calculate.py added"
+[master b966e9a] index and readme deleted and calculate.py added
+ 2 files changed, 7 deletions(-)
+ delete mode 100644 index.html
+ delete mode 100644 readme.txt
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git pull origin1 master
+From https://github.com/deepakacharyahebri/try-and-learn
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git push origin1 master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 221 bytes | 221.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/deepakacharyahebri/try-and-learn
+   d78b202..b966e9a  master -> master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ ls
+calculate.py
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        calculate.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git add -A
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git commit -am "index and readme deleted and calculate.py added"
+[master fcb5976] index and readme deleted and calculate.py added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 calculate.py
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git pull origin1 master
+From https://github.com/deepakacharyahebri/try-and-learn
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git push origin1 master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/deepakacharyahebri/try-and-learn
+   b966e9a..fcb5976  master -> master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch divide
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch
+  divide
+* master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git checkout divide
+divide           HEAD             ORIG_HEAD        origin/master
+FETCH_HEAD       master           origin/HEAD      origin1/master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git checkout divide
+divide           HEAD             ORIG_HEAD        origin/master
+FETCH_HEAD       master           origin/HEAD      origin1/master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git checkout divide
+Switched to branch 'divide'
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (divide)
+$ git push -u origin1 divide
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/deepakacharyahebri/try-and-learn
+ * [new branch]      divide -> divide
+Branch 'divide' set up to track remote branch 'divide' from 'origin1'.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (divide)
+$ git branch -a
+* divide
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+  remotes/origin1/divide
+  remotes/origin1/master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (divide)
+$ git checkout master
+Switched to branch 'master'
+M       calculate.py
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git pull origin1 master
+From https://github.com/deepakacharyahebri/try-and-learn
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch --merged
+  divide
+* master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git merge divide
+Already up to date.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git push origin1 master
+Everything up-to-date
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch --merged
+  divide
+* master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git commit -am "divide function updated"
+[master 76dafb3] divide function updated
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git checkout divide
+Switched to branch 'divide'
+Your branch is up to date with 'origin1/divide'.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (divide)
+$ git push -u origin1 divide
+Everything up-to-date
+Branch 'divide' set up to track remote branch 'divide' from 'origin1'.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (divide)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git pull origin1 master
+From https://github.com/deepakacharyahebri/try-and-learn
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch merged
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch --merged
+  divide
+* master
+  merged
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch -d merged
+Deleted branch merged (was 76dafb3).
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git branch --merged
+  divide
+* master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
+$ git push origin1 master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/deepakacharyahebri/try-and-learn
+   fcb5976..76dafb3  master -> master
+
+Admin@DEEPAK-BG2 MINGW64 ~/Documents/DEEPAK_ACHARYA/cloned (master)
 $
